@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /var/www/html
-yum install wget -y
-wget https://getcomposer.org/composer.phar
-php composer.phar install
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+php -r "unlink('composer-setup.php');"
