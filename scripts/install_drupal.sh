@@ -1,10 +1,12 @@
 #!/bin/bash
 
-mkdir /var/www/drupal
+# mkdir /var/www/drupal
 
-composer create-project drupal-composer/drupal-project:8.x-dev /var/www/drupal --no-interaction
+composer global require drush/drush:8.*
+/root/.composer/vendor/bin/drush dl -y drupal-8 --drupal-project-rename drupal
+mv /root/drupal /var/www/drupal
 
-#drush site-install standard --yes \
+#/root/.composer/vendor/bin/drush site-install standard --yes \
 #--site-name='We Think Twice Dev Site' \
 #--site-mail=emp@rti.org \
 #--account-name=admin \
