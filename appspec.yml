@@ -10,7 +10,10 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/install_composer_dependencies.sh
+    - location: scripts/install_composer.sh
+      timeout: 300
+      runas: root
+    - location: scripts/install_drupal.sh
       timeout: 300
       runas: root
     - location: scripts/start_server.sh
