@@ -1,6 +1,8 @@
 #!/bin/bash
 
-composer create-project drupal-composer/drupal-project:8.x-dev /var/www --no-interaction
+mkdir /var/www/drupal
+
+composer create-project drupal-composer/drupal-project:8.x-dev /var/www/drupal --no-interaction
 
 #drush site-install standard --yes \
 #--site-name='We Think Twice Dev Site' \
@@ -37,5 +39,5 @@ EOF
 
 chown -R apache:apache /var/www/
 chmod -R 750 /var/www
-# chmod -R 770 /var/www/drupal/sites/default/files
+chmod -R 770 /var/www/drupal/sites/default/files
 
