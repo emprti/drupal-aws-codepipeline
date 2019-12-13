@@ -38,6 +38,4 @@ ServerTokens Prod
 EOF
 
 chown -R apache:apache /var/www/
-chmod -R 750 /var/www
-# chmod -R 770 /var/www/drupal/sites/default/files
 
