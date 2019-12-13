@@ -1,6 +1,6 @@
 #!/bin/bash
 
-composer create-project drupal-composer/drupal-project:8.x-dev /var/www/drupal --no-interaction
+composer create-project drupal-composer/drupal-project:8.x-dev /var/www --no-interaction
 
 #drush site-install standard --yes \
 #--site-name='We Think Twice Dev Site' \
@@ -35,7 +35,7 @@ ServerSignature Off
 ServerTokens Prod
 EOF
 
-chown -R apache:apache /var/www/drupal/
-chmod -R 750 /var/www/drupal
-chmod -R 770 /var/www/drupal/sites/default/files
+chown -R apache:apache /var/www/
+chmod -R 750 /var/www
+# chmod -R 770 /var/www/drupal/sites/default/files
 
